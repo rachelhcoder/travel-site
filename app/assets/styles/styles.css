@@ -1,0 +1,7 @@
+$mainBlue: #2f5572;
+body {color:teal;}
+.large-hero {
+    h2 {
+        color:$mainBlue;
+    }
+}
