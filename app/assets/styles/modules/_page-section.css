@@ -7,4 +7,6 @@
         background-color:$mainblue;
         color:white;
     }
+    &--testimonials {
+        background-color:#fff;  }
 }
