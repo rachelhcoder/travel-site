@@ -3,10 +3,23 @@
     @mixin atMd {
         padding: 4.5rem 0;
     }
+    &--no-b-md {
+        padding-bottom:0;
+        @mixin atMd{
+            padding-bottom:4.5rem;
+        }
+    }
+    &--no-b-lg {
+        padding-bottom:0;
+        @mixin atLg {
+            
+        }
+    }
     &--blue {
         background-color:$mainblue;
         color:white;
     }
     &--testimonials {
-        background-color:#fff;  }
-}
+        background-color:rgba(47,85,114,.2);
+    }
+    }

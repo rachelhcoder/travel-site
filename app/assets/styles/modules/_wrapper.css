@@ -8,6 +8,22 @@
     &--medium {
         max-width: 976px;
     }
+    &--no-padding-md{
+        padding-left:0;
+        padding-right:0;
+        @mixin atMd {
+            padding-left:18px;
+            padding-right:18px;
+        }
+    }
+    &--no-padding-lg{
+        padding-left:0;
+        padding-right:0;
+        @mixin atLg {
+            padding-left:18px;
+            padding-right:18px;
+        }
+    }
     &--b {
         margin-bottom:1rem;
         @mixin atSm {
