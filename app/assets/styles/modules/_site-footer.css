@@ -3,11 +3,10 @@
     color:white;
     padding:.5rem 0;
     text-align:center;
-    margin-bottom:1rem;
-    
     &__text {
         display:block;
         font-weight:200;
+        padding-bottom:.5rem;
         @mixin atMd {
             display:inline;
             margin-bottom:0;

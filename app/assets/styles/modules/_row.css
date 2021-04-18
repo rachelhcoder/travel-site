@@ -1,24 +1,4 @@
 .row {
-
-   @mixin clear;
-    &--gutters {
-        margin-right:-65px;
-    }
-    &--gutters > div {
-        padding-right:65px;
-    }
-    &--gutters-large {
-        margin-right:-100px;
-    }
-    &--gutters-small {
-        margin-right:-45px;
-    }
-    &--gutters-large > div {
-        padding-right:100px;
-    }
-    &--gutters-small > div {
-        padding-right:45px;
-    }
     &__b-margin-until-medium {
         margin-bottom:1rem;  
     }
@@ -26,68 +6,59 @@
         padding-top:80px;
     }
     @mixin atMd {
-        &__b-margin-until-medium {
-            margin-bottom:0;       
-        }
-        &__medium-4{
-            float:left;
-            width:33.33%;
-        }
-        &__medium-8{
-            float:left;
-            width:66.6%;
-        }
-        &__medium-6 {
-            float:left;
-            width:50%;
-        }
-        &__medium-4--larger {
-            width:37%;
-        }
-        &__medium-8--smaller {
-            width:63%;
-        }
+        display:grid;
+        grid-template-columns:repeat(12,1fr);
+            &--gutters {
+                column-gap:5.3%;
+            }
+            &--gutters-large {
+                column-gap:8%;
+            }
+            &--gutters-small {
+                column-gap:3.6%;
+            }
+            &__b-margin-until-medium {
+                margin-bottom:0;       
+            }
+            &__medium-4 {
+                grid-column:span 4;
+            }
+            &__medium-8{
+                grid-column:span 8;
+            }
+            &__medium-6 {
+                grid-column:span 6;
+            }
     }
     @mixin atLg {
         &__b-lg-until-medium {
             margin-bottom:0;       
         }
         &__lg-4{
-            float:left;
-            width:33.33%;
+            grid-column:span 4;
         }
         &__lg-8{
-            float:left;
-            width:66.6%;
+            grid-column:span 8;
         }
         &__lg-6 {
-            float:left;
-            width:50%;
+            grid-column:span 6;
         }
-        &__lg-4--larger {
-            width:37%;
-        }
-        &__lg-8--smaller {
-            width:63%;
-        }
+
     }
     /* BEGIN EQUAL HEIGHT RULES */
     &--equal-height-at-md {
         @mixin atMd {
-            display:flex;
-        }
-        & > div {
-            float:none;
-            display:flex;
+            & > div {
+                display:flex;
+            }
         }
     }
     &--equal-height-at-lg {
         @mixin atLg {
-            display:flex;
+            & > div {
+                display:flex;
+            }
         }
-        & > div {
-            float:none;
-            display:flex;
-        }
+        
     }
 }
