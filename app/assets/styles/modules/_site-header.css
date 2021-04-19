@@ -13,7 +13,7 @@
     &__btn-container {
         
         @mixin atMd {
-            float:right;
+            order:2;
         }
     }
     &__logo {
@@ -50,8 +50,10 @@
         z-index:-10;
         transition:all 350ms ease-out;
         @mixin atMd {
+            opacity:1;
             transform:scale(1);
-            display:block;
+            display:flex;
+            justify-content:flex-end;
             padding-top:0;
         }
         &--show {

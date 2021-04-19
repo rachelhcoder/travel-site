@@ -3,21 +3,15 @@
     @mixin atMd {
         padding-top:10px;
     }
-    &--pull-right {
-        @mixin atMd{
-            float:right;
-        }
-    }
+
     ul {
         padding:0;
         @mixin atMd {
             margin:0;
         }
-        @mixin clear;
         li {
             @mixin atMd {
-                float:left;
-                display:block;
+                padding-right:20px;
             }
             list-style-type:none;
             display:inline-block;
