@@ -5,6 +5,10 @@
     &__blue {
         color:$mainblue;
     }
+    &__less-margin {
+        margin-bottom:1.3rem;
+        margin-top:0;
+    }
     @mixin atSm {
         font-size:3.75rem;
     }
