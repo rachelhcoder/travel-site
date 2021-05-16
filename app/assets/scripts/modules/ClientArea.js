@@ -23,16 +23,18 @@ class ClientArea {
         `)
     }
     events(){
-        this.form.addEventListener('submit',function(e){
+        this.form.addEventListener('submit',(e)=>{
             e.preventDefault();
             this.sendRequest();
         })
     }
     sendRequest(){
-        Axios.post('https://awesome-noether-c9bb88.netlify.app/.netlify/functions/secret-area',{password: this.field.value}).then((response) => {
+        Axios.post('https://awesome-noether-c9bb88.netlify.app/.netlify/functions/secret-area',{password: this.field.value})
+        .then((response) => {
             this.form.remove();
             this.contentArea.innerHTML = response.data;
-        }).catch( () => {
+        })
+        .catch( () => {
             this.contentArea.innerHTML = `<p class="client-area__error">That secret phrase is not correct. Try again.</p>`;
             this.field.value = '';
             this.field.focus();
