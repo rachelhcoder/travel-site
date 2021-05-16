@@ -22,12 +22,6 @@ class ClientArea {
             </div>        
         `)
     }
-    events(){
-        this.form.addEventListener('submit',(e)=>{
-            e.preventDefault();
-            this.sendRequest();
-        })
-    }
     sendRequest(){
         Axios.post('https://awesome-noether-c9bb88.netlify.app/.netlify/functions/secret-area',{password: this.field.value})
         .then((response) => {
@@ -40,6 +34,13 @@ class ClientArea {
             this.field.focus();
         });
     }
+    events(){
+        this.form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            this.sendRequest();
+        })
+    }
+
 }
 
 export default ClientArea
